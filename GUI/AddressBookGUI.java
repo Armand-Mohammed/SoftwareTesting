@@ -26,7 +26,6 @@ public class AddressBookGUI extends JFrame {
     }
 
     public static void main(String[] args) throws ClassNotFoundException {
-        Class.forName("org.sqlite.JDBC");
         SwingUtilities.invokeLater(() -> createAndShowGUI());
     }
 
