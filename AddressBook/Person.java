@@ -39,7 +39,6 @@ public class Person {
         this.phone = phone;
     }
 
-
     public String getFirstName() {
         return firstName;
     }

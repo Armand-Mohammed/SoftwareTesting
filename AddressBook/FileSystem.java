@@ -50,4 +50,13 @@ public class FileSystem {
         
         connection.close();
     }
+
+    public void deleteFile(AddressBook addressBook, File file) throws SQLException {
+        Connection connection = DriverManager.getConnection("jdbc:sqlite:" + file.getAbsolutePath());
+        Statement stmt = connection.createStatement();
+
+        stmt.close();
+        connection.close();
+        boolean result = new File(file.getAbsolutePath()).delete();
+    }
 }
